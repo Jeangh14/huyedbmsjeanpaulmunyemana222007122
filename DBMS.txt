@@ -1,0 +1,433 @@
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.3.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use  ruhande;
+Database changed
+mysql> select * from ngoma;
+Empty set (0.00 sec)
+
+mysql> show tables;
++-------------------+
+| Tables_in_ruhande |
++-------------------+
+| ngoma             |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from ngoma
+    -> select * from ngoma;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select * from ngoma' at line 2
+mysql> select * from ngoma;
+Empty set (0.00 sec)
+
+mysql> insert into ngoma values('01','Kamali','Eric','m','Southern','Huye','Tumba','Cyarwa','kamalieric@gmail.com','0781234567');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+--------+--------+----------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR | CELL   | EMAIL_ADDRESS        | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+--------+--------+----------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba  | Cyarwa | kamalieric@gmail.com | 0781234567 |
++------+------------+-----------+--------+----------+----------+--------+--------+----------------------+------------+
+1 row in set (0.00 sec)
+
+mysql> insert into ngoma values('2','Kwizera','Partick','m','Southern','Huye','Tumba','Cyarwa','kwizerapatrick@gmail.com','0782234567');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+--------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+--------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba  | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba  | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
++------+------------+-----------+--------+----------+----------+--------+--------+--------------------------+------------+
+2 rows in set (0.00 sec)
+
+mysql> insert into ngoma values('3','Mahoro','Anne','f','Southern','Huye','Tumba','Cyarwa','mahoroanne@gmail.com','0782224567');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into ngoma values('4','Ishimwe','Ella','f','Kigali','Gasabo','Kanombe','Kabeza','ishimweella@gmail.com','0782222567');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into ngoma values('5','Ishimwe','Alice','f','Southern','Kamonyi','Rukoma','Remera','ishimwealice@gmail.com','0782222267');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+5 rows in set (0.00 sec)
+
+mysql> insert into ngoma values('5','Ishimwe','Didier','m','Southern','Huye','Ngoma','Butare','dushimedidier@gmail.com','0782222227');
+Query OK, 1 row affected (0.00 sec)
+
+mysql>
+mysql> insert into ngoma values('6','Dushime','Didier','m','Southern','Huye','Ngoma','Butare','dushimedidier@gmail.com','0782222227');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into ngoma values('7','Shimwa','Aimee','f','Southern','Huye','Ngoma','Butare','shimwaaimee@gmail.com','0782222222');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into ngoma values('8','Mugisha','Alex','m','Southern','Huye','Tumba','Cyarwa','mugishaalex@gmail.com','0783222222');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into ngoma values('8','Mugisha','Alexia','f','kigali','Gasabo','Kanombe','Kabeza','mutonialexia@gmail.com','0783322222');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 |
+|    5 | Ishimwe    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    6 | Dushime    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    7 | Shimwa     | Aimee     | f      | Southern | Huye     | Ngoma   | Butare | shimwaaimee@gmail.com    | 0782222222 |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba   | Cyarwa | mugishaalex@gmail.com    | 0783222222 |
+|    8 | Mugisha    | Alexia    | f      | kigali   | Gasabo   | Kanombe | Kabeza | mutonialexia@gmail.com   | 0783322222 |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set id=9 where LAST_NAME='Alexia';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 |
+|    5 | Ishimwe    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    6 | Dushime    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    7 | Shimwa     | Aimee     | f      | Southern | Huye     | Ngoma   | Butare | shimwaaimee@gmail.com    | 0782222222 |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba   | Cyarwa | mugishaalex@gmail.com    | 0783222222 |
+|    9 | Mugisha    | Alexia    | f      | kigali   | Gasabo   | Kanombe | Kabeza | mutonialexia@gmail.com   | 0783322222 |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma FIRST_NAME=Mutoni where LAST_NAME='Alexia';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=Mutoni where LAST_NAME='Alexia'' at line 1
+mysql> update ngoma FIRST_NAME='Mutoni' where LAST_NAME='Alexia';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='Mutoni' where LAST_NAME='Alexia'' at line 1
+mysql> alter table drop* from ngoma where id=9;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'drop* from ngoma where id=9' at line 1
+mysql> alter table delete * from ngoma where id=9;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'delete * from ngoma where id=9' at line 1
+mysql> delete from ngoma where id=9;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 |
+|    5 | Ishimwe    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    6 | Dushime    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    7 | Shimwa     | Aimee     | f      | Southern | Huye     | Ngoma   | Butare | shimwaaimee@gmail.com    | 0782222222 |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba   | Cyarwa | mugishaalex@gmail.com    | 0783222222 |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+9 rows in set (0.00 sec)
+
+mysql> delete from ngoma where id=5 and gender='m';
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 |
+|    6 | Dushime    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    7 | Shimwa     | Aimee     | f      | Southern | Huye     | Ngoma   | Butare | shimwaaimee@gmail.com    | 0782222222 |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba   | Cyarwa | mugishaalex@gmail.com    | 0783222222 |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+8 rows in set (0.00 sec)
+
+mysql> insert into ngoma values('9','Mutoni','Alexia','f','kigali','Gasabo','Kanombe','Kabeza','mutonialexia@gmail.com','0783322222');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into ngoma values('9','Mutoni','Alexia','f','kigali','Gasabo','Kanombe','Kabeza','mugabe @gmail.com','0783332222');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 |
+|    9 | Mutoni     | Alexia    | f      | kigali   | Gasabo   | Kanombe | Kabeza | mutonialexia@gmail.com   | 0783322222 |
+|    6 | Dushime    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    7 | Shimwa     | Aimee     | f      | Southern | Huye     | Ngoma   | Butare | shimwaaimee@gmail.com    | 0782222222 |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba   | Cyarwa | mugishaalex@gmail.com    | 0783222222 |
+|    9 | Mutoni     | Alexia    | f      | kigali   | Gasabo   | Kanombe | Kabeza | mugabe @gmail.com        | 0783332222 |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> delete from ngoma where id=9;
+Query OK, 2 rows affected (0.00 sec)
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 |
+|    6 | Dushime    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    7 | Shimwa     | Aimee     | f      | Southern | Huye     | Ngoma   | Butare | shimwaaimee@gmail.com    | 0782222222 |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba   | Cyarwa | mugishaalex@gmail.com    | 0783222222 |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+8 rows in set (0.00 sec)
+
+mysql> insert into ngoma values('9','Mutoni','Alexia','f','kigali','Gasabo','Kanombe','Kabeza','mutonialexia@gmail.com','0783322222');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into ngoma values('10','Mugabe','Patrick','m','Southern','Huye','Ngoma','Butare','mugabepatrick@gmail.com','0783322322');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 |
+|   10 | Mugabe     | Patrick   | m      | Southern | Huye     | Ngoma   | Butare | mugabepatrick@gmail.com  | 0783322322 |
+|    6 | Dushime    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    7 | Shimwa     | Aimee     | f      | Southern | Huye     | Ngoma   | Butare | shimwaaimee@gmail.com    | 0782222222 |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba   | Cyarwa | mugishaalex@gmail.com    | 0783222222 |
+|    9 | Mutoni     | Alexia    | f      | kigali   | Gasabo   | Kanombe | Kabeza | mutonialexia@gmail.com   | 0783322222 |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 |
+|   10 | Mugabe     | Patrick   | m      | Southern | Huye     | Ngoma   | Butare | mugabepatrick@gmail.com  | 0783322322 |
+|    6 | Dushime    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    7 | Shimwa     | Aimee     | f      | Southern | Huye     | Ngoma   | Butare | shimwaaimee@gmail.com    | 0782222222 |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba   | Cyarwa | mugishaalex@gmail.com    | 0783222222 |
+|    9 | Mutoni     | Alexia    | f      | kigali   | Gasabo   | Kanombe | Kabeza | mutonialexia@gmail.com   | 0783322222 |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> delete from ngoma where id=10;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 |
+|    6 | Dushime    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    7 | Shimwa     | Aimee     | f      | Southern | Huye     | Ngoma   | Butare | shimwaaimee@gmail.com    | 0782222222 |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba   | Cyarwa | mugishaalex@gmail.com    | 0783222222 |
+|    9 | Mutoni     | Alexia    | f      | kigali   | Gasabo   | Kanombe | Kabeza | mutonialexia@gmail.com   | 0783322222 |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+9 rows in set (0.00 sec)
+
+mysql> insert into ngoma values('10','Kabarebe','Denis','m','Southern','Huye','Tumba','Cyarwa','kabarebedenis@gmail.com','0783222322');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 |
+|   10 | Kabarebe   | Denis     | m      | Southern | Huye     | Tumba   | Cyarwa | kabarebedenis@gmail.com  | 0783222322 |
+|    6 | Dushime    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    7 | Shimwa     | Aimee     | f      | Southern | Huye     | Ngoma   | Butare | shimwaaimee@gmail.com    | 0782222222 |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba   | Cyarwa | mugishaalex@gmail.com    | 0783222222 |
+|    9 | Mutoni     | Alexia    | f      | kigali   | Gasabo   | Kanombe | Kabeza | mutonialexia@gmail.com   | 0783322222 |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set telephone='0789888990' where id=7;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 |
+|   10 | Kabarebe   | Denis     | m      | Southern | Huye     | Tumba   | Cyarwa | kabarebedenis@gmail.com  | 0783222322 |
+|    6 | Dushime    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    7 | Shimwa     | Aimee     | f      | Southern | Huye     | Ngoma   | Butare | shimwaaimee@gmail.com    | 0789888990 |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba   | Cyarwa | mugishaalex@gmail.com    | 0783222222 |
+|    9 | Mutoni     | Alexia    | f      | kigali   | Gasabo   | Kanombe | Kabeza | mutonialexia@gmail.com   | 0783322222 |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> alter table ngoma add age int(4);
+Query OK, 10 rows affected, 1 warning (0.05 sec)
+Records: 10  Duplicates: 0  Warnings: 1
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  | age  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 | NULL |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 | NULL |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 | NULL |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 | NULL |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 | NULL |
+|   10 | Kabarebe   | Denis     | m      | Southern | Huye     | Tumba   | Cyarwa | kabarebedenis@gmail.com  | 0783222322 | NULL |
+|    6 | Dushime    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 | NULL |
+|    7 | Shimwa     | Aimee     | f      | Southern | Huye     | Ngoma   | Butare | shimwaaimee@gmail.com    | 0789888990 | NULL |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba   | Cyarwa | mugishaalex@gmail.com    | 0783222222 | NULL |
+|    9 | Mutoni     | Alexia    | f      | kigali   | Gasabo   | Kanombe | Kabeza | mutonialexia@gmail.com   | 0783322222 | NULL |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age='23' where id=1;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  | age  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 |   23 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 | NULL |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 | NULL |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 | NULL |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 | NULL |
+|   10 | Kabarebe   | Denis     | m      | Southern | Huye     | Tumba   | Cyarwa | kabarebedenis@gmail.com  | 0783222322 | NULL |
+|    6 | Dushime    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 | NULL |
+|    7 | Shimwa     | Aimee     | f      | Southern | Huye     | Ngoma   | Butare | shimwaaimee@gmail.com    | 0789888990 | NULL |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba   | Cyarwa | mugishaalex@gmail.com    | 0783222222 | NULL |
+|    9 | Mutoni     | Alexia    | f      | kigali   | Gasabo   | Kanombe | Kabeza | mutonialexia@gmail.com   | 0783322222 | NULL |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+------+
+10 rows in set (0.00 sec)
+
+mysql> alter table ngoma drop column age;
+Query OK, 10 rows affected (0.05 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 |
+|   10 | Kabarebe   | Denis     | m      | Southern | Huye     | Tumba   | Cyarwa | kabarebedenis@gmail.com  | 0783222322 |
+|    6 | Dushime    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    7 | Shimwa     | Aimee     | f      | Southern | Huye     | Ngoma   | Butare | shimwaaimee@gmail.com    | 0789888990 |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba   | Cyarwa | mugishaalex@gmail.com    | 0783222222 |
+|    9 | Mutoni     | Alexia    | f      | kigali   | Gasabo   | Kanombe | Kabeza | mutonialexia@gmail.com   | 0783322222 |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> select id,first_name,telephone from ngoma;
++------+------------+------------+
+| id   | first_name | telephone  |
++------+------------+------------+
+|    1 | Kamali     | 0781234567 |
+|    2 | Kwizera    | 0782234567 |
+|    3 | Mahoro     | 0782224567 |
+|    4 | Ishimwe    | 0782222567 |
+|    5 | Ishimwe    | 0782222267 |
+|   10 | Kabarebe   | 0783222322 |
+|    6 | Dushime    | 0782222227 |
+|    7 | Shimwa     | 0789888990 |
+|    8 | Mugisha    | 0783222222 |
+|    9 | Mutoni     | 0783322222 |
++------+------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> select * from ngoma where gender='m' and sector='Tumba';
++------+------------+-----------+--------+----------+----------+--------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+--------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba  | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba  | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
+|   10 | Kabarebe   | Denis     | m      | Southern | Huye     | Tumba  | Cyarwa | kabarebedenis@gmail.com  | 0783222322 |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba  | Cyarwa | mugishaalex@gmail.com    | 0783222222 |
++------+------------+-----------+--------+----------+----------+--------+--------+--------------------------+------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from ngoma where id='3' or  cell='Kabeza';
++------+------------+-----------+--------+----------+----------+---------+--------+------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS          | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+---------+--------+------------------------+------------+
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com   | 0782224567 |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com  | 0782222567 |
+|    9 | Mutoni     | Alexia    | f      | kigali   | Gasabo   | Kanombe | Kabeza | mutonialexia@gmail.com | 0783322222 |
++------+------------+-----------+--------+----------+----------+---------+--------+------------------------+------------+
+3 rows in set (0.01 sec)
+
+mysql> select * from ngoma;
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+| ID   | FIRST_NAME | LAST_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL   | EMAIL_ADDRESS            | TELEPHONE  |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+|    1 | Kamali     | Eric      | m      | Southern | Huye     | Tumba   | Cyarwa | kamalieric@gmail.com     | 0781234567 |
+|    2 | Kwizera    | Partick   | m      | Southern | Huye     | Tumba   | Cyarwa | kwizerapatrick@gmail.com | 0782234567 |
+|    3 | Mahoro     | Anne      | f      | Southern | Huye     | Tumba   | Cyarwa | mahoroanne@gmail.com     | 0782224567 |
+|    4 | Ishimwe    | Ella      | f      | Kigali   | Gasabo   | Kanombe | Kabeza | ishimweella@gmail.com    | 0782222567 |
+|    5 | Ishimwe    | Alice     | f      | Southern | Kamonyi  | Rukoma  | Remera | ishimwealice@gmail.com   | 0782222267 |
+|   10 | Kabarebe   | Denis     | m      | Southern | Huye     | Tumba   | Cyarwa | kabarebedenis@gmail.com  | 0783222322 |
+|    6 | Dushime    | Didier    | m      | Southern | Huye     | Ngoma   | Butare | dushimedidier@gmail.com  | 0782222227 |
+|    7 | Shimwa     | Aimee     | f      | Southern | Huye     | Ngoma   | Butare | shimwaaimee@gmail.com    | 0789888990 |
+|    8 | Mugisha    | Alex      | m      | Southern | Huye     | Tumba   | Cyarwa | mugishaalex@gmail.com    | 0783222222 |
+|    9 | Mutoni     | Alexia    | f      | kigali   | Gasabo   | Kanombe | Kabeza | mutonialexia@gmail.com   | 0783322222 |
++------+------------+-----------+--------+----------+----------+---------+--------+--------------------------+------------+
+10 rows in set (0.00 sec)
